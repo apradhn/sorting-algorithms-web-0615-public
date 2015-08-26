@@ -13,7 +13,7 @@ def your_sort(array, &block)
           break if block.call(head[i], tail[0]) >= 0
           i += 1
         end
-        i == 0 ? head.unshift(tail.shift) : head.insert(i, tail.shift)
+        i == 0 ? head << tail.shift : head.insert(i, tail.shift)
       end
     end
     head
